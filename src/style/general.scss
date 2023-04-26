@@ -1,0 +1,48 @@
+@import "bootstrap/scss/bootstrap";
+@import "node_modules/@fortawesome/fontawesome-free/css/all.css";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    max-width: 1440px;
+}
+
+img {
+    max-width: 1440px;
+}
+ul {
+    list-style: none;
+}
+body,
+header > *,
+main > *,
+footer > * 
+{
+    margin: 0 auto;
+}
+header,
+main,
+footer {
+    border: 5px solid black;
+}
+.container-blue {
+    width: 85%;
+    min-height: 1rem;
+    border: 3px solid blue;
+}
+
+.container-green {
+    width: 70%;
+    min-height: 3rem;
+    border: 3px solid green;
+}
+.ms_container {
+    border: 3px solid grey;
+}
+.container-pink {
+    width: 90%;
+    min-height: 3rem;
+    border: 3px solid pink;
+}
