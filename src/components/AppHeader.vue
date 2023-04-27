@@ -43,8 +43,8 @@ export default {
 <template>
     <header>
         <div class="container-blue d-flex justify-content-between py-2">
-            <div class="left">
-                <span>English</span>
+            <div class="left d-flex">
+                <p>English</p>
                 <i class="fa-solid fa-chevron-down"></i>
             </div>
             <div class="right d-flex align-content-center">

@@ -48,7 +48,7 @@ export default {
     <div class="d-flex ms_jumbotron row-cols-2">
         <div class="col left d-flex align-items-center">
             <div class="left-content">
-                <h2 class="fs-1">Start Investing in You</h2>
+                <h1>Start Investing in You</h1>
                 <p class="fs-4">With over 1200 courses in 18 subjects, you're guardanteed to find something that's right for you.</p>
                 <button class="btn btn-primary">JOIN FOR FREE</button>
             </div>
@@ -120,6 +120,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+h1 {
+    font-size: 3rem;
+    font-weight: 300;
+}
 .ms_searchbar {
 
     .input-group {

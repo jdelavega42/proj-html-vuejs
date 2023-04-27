@@ -24,10 +24,21 @@ footer > *
 {
     margin: 0 auto;
 }
+.ms_container-lg {
+    width: 90%;    
+}
+.ms_container-md {
+    width: 85%;
+}
+.ms_container-sm {
+    width: 70%;
+}
+
+// DEBUG
 header,
 main,
 footer {
-    border: 5px solid black;
+    border: 1px solid black;
 }
 .container-blue {
     width: 85%;
@@ -48,4 +59,16 @@ footer {
 
 a {
     text-decoration: none;
+}
+
+h2 {
+    font-size: 2.75rem;
+    font-weight: 200;
+}
+h3 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+p {
+    font-weight: 200;
 }
