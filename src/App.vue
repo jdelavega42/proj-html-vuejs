@@ -8,7 +8,11 @@ export default {
     AppHeader,
     AppMain,
     AppFooter
-
+  },
+  data(){
+      return {
+          pages: ['Blog', 'Courses', 'Home', 'Membership', 'Shortcodes', 'Typography' ]
+      }
   }
 }
 
@@ -17,7 +21,7 @@ export default {
 <template>
 <AppHeader />
 <AppMain />
-<AppFooter />
+<AppFooter :pages="pages"/>
 </template>
 
 <style lang="scss">

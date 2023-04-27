@@ -1,17 +1,39 @@
 <script>
+import { store } from '../store';
 export default {
     name: "AppHeader",
     data() {
         return {
-            pages: ['Courses', 'Zoom', 'Pages', 'Bundle', 'Course Formats', 'Add Course', 'Demos'],
-            links: [
-                'fa-brands fa-twitter',
-                'fa-brands fa-instagram',
-                'fa-regular fa-basketball',
-                'fa-brands fa-discord',
-                'fa-brands fa-git',
-                'fa-brands fa-linkedin',
-                'fa-brands fa-pinterest'
+            store,
+            pages: [
+                {
+                    name: 'Courses',
+                    isNew: false
+                },
+                {
+                    name: 'Zoom',
+                    isNew: true
+                },
+                {
+                    name: 'Pages',
+                    isNew: false
+                },
+                {
+                    name: 'Bundle',
+                    isNew: false
+                },
+                {
+                    name: 'Course Formats',
+                    isNew: false
+                },
+                {
+                    name: 'AddCourse',
+                    isNew: true
+                },
+                {
+                    name: 'Demos',
+                    isNew: false
+                }
             ]
         }
     }
@@ -20,17 +42,19 @@ export default {
 
 <template>
     <header>
-        <div class="container-blue d-flex justify-content-between">
+        <div class="container-blue d-flex justify-content-between py-2">
             <div class="left">
                 <span>English</span>
                 <i class="fa-solid fa-chevron-down"></i>
             </div>
-            <div class="right d-flex">
-                <ul>
-                    <li v-for="(page, index) in pages" :key="index" class="d-inline px-1">{{ page }}</li>
+            <div class="right d-flex align-content-center">
+                <ul class="d-flex px-4">
+                    <li v-for="(page, index) in pages" :key="index" class="px-1" :class="page.isNew ? 'active':''">{{ page.name }}</li>
                 </ul>
-                <ul>
-                    <li v-for="(link, index) in links" :key="index" class="d-inline px-1"> <i :class="link"></i></li>
+                <ul class="d-flex">
+                    <template v-for="(link , index) in this.store.externalLinks" :key="index" >
+                        <li v-if="link.onHeader" class="px-1"> <i :class="link.icon"></i></li>
+                    </template>
                 </ul>
             </div>
         </div>
@@ -38,4 +62,19 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.right {
+    li {
+        position: relative;
+    }
+    .active::after {
+        content: 'NEW';
+        position: absolute;
+        top: -1ch;
+        right: 0; 
+        background-color: red;
+        color: white;
+        font-size: .5rem;
+        padding: 0 .25rem;
+    }
+}
 </style>
