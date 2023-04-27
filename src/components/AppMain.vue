@@ -24,7 +24,6 @@ export default {
 
 <template>
     <main>
-        <h2>Io sono AppMain</h2>
         <MainFront />
         <MainSlogan />
         <MainRecent />

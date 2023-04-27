@@ -15,6 +15,8 @@ export default {
 
 <style lang="scss" scoped>
     .ms_container {
+        background-size: 100%;
+        background-position: center;
     background-image: url(../../assets/images/brooke-cagle-224821-unsplash-1-1920x700.jpg);
     }
     .container-green {
