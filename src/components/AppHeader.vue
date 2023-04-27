@@ -42,18 +42,18 @@ export default {
 
 <template>
     <header>
-        <div class="container-blue d-flex justify-content-between py-2">
-            <div class="left d-flex">
-                <p>English</p>
+        <div class="ms_container-md">
+            <div>
+                <span>English</span>
                 <i class="fa-solid fa-chevron-down"></i>
             </div>
-            <div class="right d-flex align-content-center">
-                <ul class="d-flex px-4">
-                    <li v-for="(page, index) in pages" :key="index" class="px-1" :class="page.isNew ? 'active':''">{{ page.name }}</li>
+            <div class="ms_lists">
+                <ul>
+                    <li v-for="(page, index) in pages" :key="index" :class="{'active': page.isNew}">{{ page.name }}</li>
                 </ul>
-                <ul class="d-flex">
-                    <template v-for="(link , index) in this.store.externalLinks" :key="index" >
-                        <li v-if="link.onHeader" class="px-1"> <i :class="link.icon"></i></li>
+                <ul>
+                    <template v-for="link in this.store.externalLinks">
+                        <li v-if="link.onHeader"> <i :class="link.icon"></i></li>
                     </template>
                 </ul>
             </div>
@@ -62,19 +62,32 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.right {
-    li {
-        position: relative;
-    }
-    .active::after {
-        content: 'NEW';
-        position: absolute;
-        top: -1ch;
-        right: 0; 
-        background-color: red;
-        color: white;
-        font-size: .5rem;
-        padding: 0 .25rem;
+.ms_container-md {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    font-weight: 200;
+}
+.ms_lists {
+    display: flex;
+    align-content: center;
+    ul {
+        display: flex;
+        margin-left: 2rem;
+        li {
+            position: relative;
+            padding: 0 .25rem;
+        }
+        .active::after {
+            content: 'NEW';
+            position: absolute;
+            top: -1ch;
+            right: 0; 
+            background-color: red;
+            color: white;
+            font-size: .5rem;
+            padding: 0 .25rem;
+        }
     }
 }
 </style>

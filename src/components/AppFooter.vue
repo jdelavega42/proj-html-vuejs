@@ -33,8 +33,8 @@ export default {
 
 <template>
     <footer>
-        <div class="container-green d-flex row-cols-4 py-5">
-            <div class="col">
+        <div class="ms_container-sm">
+            <div class="ms_col">
                 <h4>About</h4>
                 <p><a href="#">Masterstudy</a> is Education Wordpress theme featured by Learning Management System (LSM) for online education. <br> Developed by <a href="#">JDeveloper</a></p>
                 <ul class="p-0">
@@ -43,33 +43,32 @@ export default {
                     </template>
                 </ul>
             </div>
-            <div class="col">
+            <div class="ms_col">
                 <h4>Contact</h4>
                 <address>
                     <p>USA,California 20, First Avenue. <br> California</p>
                     <p>Tel.: +1 212 459 300 32 <br> Fax.: +1 212 375 24 14</p>
-                    <p class="secondary-text ms_grey">info@masterstudy.com</p>
+                    <p class="ms_secondary-text ms_grey">info@masterstudy.com</p>
                 </address>
             </div>
-            <div class="col">
+            <div class="ms_col">
                 <h4>Pages</h4>
-                <ul class="row row-cols-2 dotted">
-                    <li v-for="page in pages" class="col"> {{ page }}</li>
+                <ul class="ms_list">
+                    <li v-for="page in pages" class="ms_item"><p>{{ page }}</p></li>
                 </ul>
             </div>
-            <div class="col">
+            <div class="ms_col">
                 <h4>Blog</h4>
-                <ul class="p-0">
-                    <li v-for="(article, index) in blog" :key="index" class="d-flex gap-1">
-                        <img :src="getImage(article)" alt="" class="w-25 squared">
-                        <div class="info w-75">
+                <ul>
+                    <li v-for="(article, index) in blog" :key="index" class="ms_blog">
+                        <img :src="getImage(article)" alt="" class="ms_img">
+                        <div class="ms_text">
                             <p class="text-wrap"> {{ article.description }} <br>
-                                <span class="secondary-text">-{{ article.date }}</span>
+                                <span class="ms_secondary-text">-{{ article.date }}</span>
                             </p>
                         </div>
                     </li>
                 </ul>
-
             </div>
             
         </div>
@@ -78,25 +77,46 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.container-green {
-    .col {
-        h4 {
-            font-size: 1.25rem;
-        }
+.ms_container-sm {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem 0;
+    .ms_col {
+        width: 25%;
         p {
             font-size: .8rem;
         }
-        .secondary-text {
+        .ms_secondary-text {
             font-size: .75rem;
         }
-        .dotted {
-            list-style: disc;
-        }
-        img {
-            height: 100%;
-        }
         .ms_grey {
-            color: lightgray;
+            color: gray;
+        }
+        .ms_list {
+            display: flex;
+            flex-wrap: wrap;
+            .ms_item {
+                width: 50%;
+                position: relative;
+                left: 1ch;
+                &::before {
+                    content: '\00B7';
+                    position: absolute;
+                    left: -1ch;
+                    top: calc(-1ch / 3);
+                }
+            }
+        }
+        .ms_blog {
+            display: flex;
+            gap: .5rem;
+            .ms_img {
+                width: 30%;
+                height: 100%;
+            }
+            .ms_text {
+                width: 70%;
+            }
         }
     }
 }
