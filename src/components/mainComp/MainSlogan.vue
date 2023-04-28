@@ -10,7 +10,7 @@ export default {
             <div class="w-50 py-5">
                 <h2>Limitless learning, <br>more possibilities</h2>
                 <p>Online courses open the opportunity for learning to almost anyone, regardless of their scheduling commitments.</p>
-                <button class="btn btn-primary">READ MORE</button>
+                <button class="ms_button">READ MORE</button>
             </div>
         </div>
     </div>

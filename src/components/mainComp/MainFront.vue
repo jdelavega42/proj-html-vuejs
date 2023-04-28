@@ -196,16 +196,36 @@ h1 {
         position: absolute;
         top: 352px;
         right: -22px;
+        &:hover {
+            animation: floating 2000ms ease infinite;
+        }
     }
     .elem2 {
         position: absolute;
         top: 135px;
         right: -43px;
+        &:hover {
+        animation: floating 2000ms ease infinite;
+        }
     }
     .elem3 {
         position: absolute;
         top: 289px;
         right: 55px;
+        &:hover {
+        animation: floating 2000ms ease infinite;
+        }
+    }
+
+    @keyframes floating {
+        0%,
+        100% {
+            transform: translateY(0%);
+        }
+        50% {
+            transform: translateY(-20%);
+        }
+        
     }
 }
 .ms_cards-folder {
@@ -218,6 +238,12 @@ h1 {
         padding: .5rem;
         border-radius: 1rem;
         background: lightcyan;
+        transition: 200ms;
+
+        &:hover {
+            color: white;
+            background-color: lightseagreen;
+        }
         i {
             color: darkblue;
         }
