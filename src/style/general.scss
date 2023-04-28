@@ -24,6 +24,11 @@ footer > *
 {
     margin: 0 auto;
 }
+.ms_container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .ms_container-lg {
     width: 90%;    
 }
@@ -35,11 +40,6 @@ footer > *
 }
 
 // DEBUG
-header,
-main,
-footer {
-    border: 1px solid black;
-}
 .container-blue {
     width: 85%;
     border: 3px solid blue;
@@ -48,9 +48,6 @@ footer {
 .container-green {
     width: 70%;
     border: 3px solid green;
-}
-.ms_container {
-    border: 3px solid grey;
 }
 .container-pink {
     width: 90%;
@@ -73,5 +70,13 @@ h4 {
     font-size: 1rem;
 }
 p {
-    font-weight: 300;
+    font-weight: 200;
+}
+
+.ms_button {
+    padding: .75rem 1.5rem;
+    background-color: lightblue;
+    font-weight: 500;
+    border: none;
+    border-radius: 1.5rem
 }

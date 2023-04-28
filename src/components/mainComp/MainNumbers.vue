@@ -5,25 +5,25 @@ export default {
 </script>
 
 <template>
-    <div class="ms_container text-center pt-5">
+    <div class="ms_container">
         <h2>We are Proud</h2>
         <p>Certificate courses are instructed by highly educated and qualified instructors who hold doctoral and master's level degrees.</p>
-        <div class="row row-cols-4 w-50 mx-auto">
-            <div class="col">
-                <div class="number fs-1">2000</div>
-                <div class="info">STUDENTS</div>
+        <div class="ms_data">
+            <div class="ms_col">
+                <h2 class="ms_number">2000</h2>
+                <p class="ms_info">STUDENTS</p>
             </div>
-            <div class="col">
-                <div class="number fs-1">950</div>
-                <div class="info">COURSES</div>
+            <div class="ms_col">
+                <h2 class="ms_number">950</h2>
+                <p class="ms_info">COURSES</p>
             </div>
-            <div class="col">
-                <div class="number fs-1">1600</div>
-                <div class="info">HOURS VIDEO</div>
+            <div class="ms_col">
+                <h2 class="ms_number">1600</h2>
+                <p class="ms_info">HOURS VIDEO</p>
             </div>
-            <div class="col">
-                <div class="number fs-1">150</div>
-                <div class="info">COUNTRIES REACHED</div>
+            <div class="ms_col">
+                <h2 class="ms_number">150</h2>
+                <p class="ms_info">COUNTRIES REACHED</p>
             </div>
         </div>
     <img src="../../assets/images/we_proud.png" alt="">
@@ -31,14 +31,26 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.col:not(:last-of-type){
-    border-right: 2px solid grey
-}
-.info {
-    font-weight: lighter;
-    font-size: .8rem;
-}
-img {
-    margin-top: -100px;
+.ms_container {
+    text-align: center;
+    padding-top: 2rem;
+
+    .ms_data {
+        display: flex;
+        margin: 4rem auto 0;
+        width: 50%;
+        .ms_col {
+            width: 25%;
+            .ms_info {
+                font-size: .75rem;
+            }
+        }
+    }
+    .ms_col:not(:last-of-type){
+        border-right: 1px solid lightgray;
+    }
+    img {
+        margin-top: -8rem;
+    }
 }
 </style>

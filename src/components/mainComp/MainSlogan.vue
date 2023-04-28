@@ -5,14 +5,11 @@ export default {
 </script>
 
 <template>
-    <div class="ms_bg">
-
-        <div class="container-green">
-            <div class="w-50 py-5 fs-1">
-                <h2>Limitless learning,<br>
-                    more possibilities
-                </h2>
-                <p class="py-5 fs-3">Online courses open the opportunity for learning to almost anyone, regardless of their scheduling commitments.</p>
+    <div class="ms_container">
+        <div class="ms_container-sm">
+            <div class="w-50 py-5">
+                <h2>Limitless learning, <br>more possibilities</h2>
+                <p>Online courses open the opportunity for learning to almost anyone, regardless of their scheduling commitments.</p>
                 <button class="btn btn-primary">READ MORE</button>
             </div>
         </div>
@@ -20,12 +17,13 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.ms_bg {
-    background-size: cover;
-    background-position: center;
+.ms_container {
     background-image: url(../../assets/images/Untitled-1-1-1-1-1.png);
-    .container-green {
+    .ms_container-sm {
         margin: 0 auto;
+        p {
+            font-size: 1.25rem;
+        }
     }
 }
 </style>

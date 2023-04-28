@@ -86,6 +86,7 @@ export default {
             background-color: red;
             color: white;
             font-size: .5rem;
+            font-weight: 500;
             padding: 0 .25rem;
         }
     }
