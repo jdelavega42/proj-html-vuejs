@@ -26,7 +26,7 @@ export default {
                     img: 'photo-1461749280684-dccba630e2f6-544x322.jpeg',
                     category: 'Apache',
                     name: 'Web Coding and Apache Basics',
-                    hours: 6,
+                    hours: '6 hours',
                     rating: null,
                     oldPrice: null,
                     price: 'Free',
@@ -37,9 +37,9 @@ export default {
                     promo: 'featured',
                     label: 'new',
                     name: 'Real Things Art Painting by Jason Ni',
-                    hours: 6,
+                    hours: '6 hours',
                     rating: null,
-                    oldPrice: '60',
+                    oldPrice: '$60',
                     price: '$45',
                 },
                 {
@@ -59,14 +59,14 @@ export default {
                     name: 'How to be a DJ? Make Electronic Music',
                     hours: null,
                     rating: 5,
-                    oldPrice: null,
+                    oldPrice: '$59',
                     price: '$49',
                 },
                 {
-                    img: '',
+                    img: 'stm_lms_avatar20123.jpg',
                     category: 'Communication',
                     name: 'Design Instruments for Communication',
-                    hours: 6,
+                    hours: '6 hours',
                     rating: null,
                     oldPrice: null,
                     price: '',
@@ -75,7 +75,7 @@ export default {
                     img: 'cathryn-lavery-67852-unsplash-544x322.jpg',
                     category: 'Art',
                     name: 'Make your Concept Right and Beautiful',
-                    hours: 6,
+                    hours: '6 hours',
                     rating: null,
                     oldPrice: null,
                     price: '$70',
@@ -84,7 +84,7 @@ export default {
                     img: 'photo-1496307042754-b4aa456c4a2d-544x322.jpeg',
                     category: 'Bycycling',
                     name: 'Road Bike Manual or How to Be a Champion',
-                    hours: 6,
+                    hours: '6 hours',
                     rating: null,
                     oldPrice: null,
                     price: '$20',
@@ -93,7 +93,7 @@ export default {
                     img: 'cristian-grecu-762012-unsplash-min-scaled-544x322.jpg',
                     category: 'Documentary',
                     name: 'How to Make Beautiful Landscape photos?',
-                    hours: 6,
+                    hours: '6 hours',
                     rating: null,
                     oldPrice: null,
                     price: '$60',
@@ -102,7 +102,7 @@ export default {
                     img: 'landscape-544x322.jpg',
                     category: 'Art',
                     name: 'Let\'s paint Van Gogh\'s Starry Night',
-                    hours: 6,
+                    hours: '6 hours',
                     rating: null,
                     oldPrice: null,
                     price: '$79',
@@ -122,7 +122,7 @@ export default {
                     category: 'Art',
                     label: 'special',
                     name: 'How to Work with Legendary RED camera',
-                    hours: 6,
+                    hours: '6 hours',
                     rating: null,
                     oldPrice: null,
                     price: 'Free',
@@ -131,7 +131,7 @@ export default {
                     img: 'promo_tf-544x322.jpg',
                     category: 'Software Development',
                     name: 'Masterstudy Mobile LMS App',
-                    hours: 2,
+                    hours: '2 hours',
                     rating: null,
                     oldPrice: null,
                     price: 'Free',
@@ -146,10 +146,10 @@ export default {
     <main>
         <MainFront />
         <MainSlogan />
-        <MainRecent />
+        <MainRecent :courses="courses"/>
         <MainNumbers />
         <MainSub />
-        <MainPopular />
+        <MainPopular :courses="courses"/>
         <MainCTA />
         <MainFeed />
     </main>
