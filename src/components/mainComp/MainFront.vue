@@ -197,7 +197,7 @@ h1 {
         top: 352px;
         right: -22px;
         &:hover {
-            animation: floating 2000ms ease infinite;
+            animation: floating 2000ms ease-in-out infinite;
         }
     }
     .elem2 {
@@ -205,7 +205,7 @@ h1 {
         top: 135px;
         right: -43px;
         &:hover {
-        animation: floating 2000ms ease infinite;
+        animation: floating 2000ms ease-in-out infinite;
         }
     }
     .elem3 {
@@ -213,7 +213,7 @@ h1 {
         top: 289px;
         right: 55px;
         &:hover {
-        animation: floating 2000ms ease infinite;
+        animation: floating 2000ms ease-in-out infinite;
         }
     }
 
